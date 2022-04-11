@@ -1257,36 +1257,36 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None )
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@eag.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@gle.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@wal.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@aaa.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
-@boy.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.spam"))
 
 
 async def spam(e):
@@ -1294,11 +1294,11 @@ async def spam(e):
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        yukki = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        aries = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         smex = await e.get_reply_message()
-        if len(yukki) == 2:
-            message = str(yukki[1])
-            counter = int(yukki[0])
+        if len(aries) == 2:
+            message = str(aries[1])
+            counter = int(aries[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
@@ -1307,7 +1307,7 @@ async def spam(e):
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(0.1)
         elif e.reply_to_msg_id and smex.media:  
-            counter = int(yukki[0])
+            counter = int(aries[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
@@ -1315,13 +1315,14 @@ async def spam(e):
                 await asyncio.sleep(0.1)  
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
-            counter = int(yukki[0])
+            counter = int(aries[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.1)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
+
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
@@ -1364,6 +1365,7 @@ async def spam(e):
         smex = await e.get_reply_message()
         if len(aries) == 2:
             message = str(aries[1])
+            print(message)
             a = await e.client.get_entity(message)
             g = a.id
             c = a.first_name
@@ -1764,36 +1766,36 @@ def user_full_name(user):
     return full_name
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@vkk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@kkk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@lkk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@mkk.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@sid.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@shy.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@aan.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@ake.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@eel.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@khu.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@shi.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@yaa.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@dav.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@raj.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@put.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@eag.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@gle.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@wal.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@aaa.on(events.NewMessage(incoming=True, pattern=r"\.add"))
-@boy.on(events.NewMessage(incoming=True, pattern=r"\.add"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@vkk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@kkk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@lkk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@mkk.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@sid.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@shy.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@aan.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@ake.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@eel.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@khu.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@shi.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@yaa.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@dav.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@raj.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@put.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@eag.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@gle.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@wal.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@aaa.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
+@boy.on(events.NewMessage(incoming=True, pattern=r"\.sudo"))
 
 
 async def get_users(event):
