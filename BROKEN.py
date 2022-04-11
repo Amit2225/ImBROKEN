@@ -1636,7 +1636,7 @@ async def spam(e):
 @aaa.on(events.NewMessage(incoming=True, pattern=r"\.repo"))
 @boy.on(events.NewMessage(incoming=True, pattern=r"\.repo"))
 async def spam(e):
-    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 =     eagle\n\nCommand:\n\n.eagle <count> <Username of User>\n\n.eagle <count> <reply to a User>\n\nCount must be a integer."
+    usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = RUDRA\n\nCommand:\n\n.rudra <count> <Username of User>\n\n.rudra <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
@@ -1875,9 +1875,12 @@ async def get_users(event):
 
 async def ping(e):
     if e.sender_id in SMEX_USERS:
+        start = datetime.now()
         text = "RUK JA PING PONG KAR RAHA HU 🥵"
         event = await e.reply(text, parse_mode=None, link_preview=None )
-        await event.edit(f"𖤍🇮 'Ꭺm °•✮•°🇧 ᏒᎾᏦᎬᏁ 𖤍  𓀠\n◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥ ✘ 🇸 ᏢᎪm")
+        end = datetime.now()
+        ms = (end-start).microseconds / 1000
+        await event.edit(f"𖤍🇮 'Ꭺm °•✮•°🇧 ᏒᎾᏦᎬᏁ 𖤍  𓀠\n◤◢◣◥◤◢◣◥◤◢◣◥◤◢◣◥ ✘ 🇸 ᏢᎪm !\n\n`{ms}` 𝗺𝘀\n💥💥Տᑭᗴᗴᗪ ᑭᗩKKᗩᗪ ᗷᗩᗩᑭ KI ᑕᕼOᗪᗪᗴ💥💥")
 
 
 
